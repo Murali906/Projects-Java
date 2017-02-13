@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+img { 
+    style="width: 100%;
+    height: auto;"
+}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+    width: 100%;
+}
+input[type=text]{
+    width: 100%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+    background-image: url('u.png') ;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    background-size:25px 25px;
+    padding: 12px 20px 12px 40px;
+}
+input[type=password]{
+    width: 100%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+    background-image: url('key.png') ;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    background-size:26px 26px;
+    padding: 12px 20px 12px 40px;
+}
+
+input[type=submit] {
+    width: 100%;
+    color: black;
+    padding: 10px 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size:16px;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 23%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 37.66%;}
+    .col-s-6 {width: 39.33%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+    .height {height:65%;}
+}
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 23%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 37.66%;}
+    .col-6 {width: 39.33%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    .height {height:65%;}
+}
+.header {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :lightgrey;
+    color: black;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: lightblue;
+}
+.aside {
+    background-color: lightgrey;
+    padding: 15px;
+    color: black;
+    text-align: center;
+    font-size: 14px;
+   }
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+

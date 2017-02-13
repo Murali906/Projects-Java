@@ -1,0 +1,55 @@
+<form name="submitForm" method="POST" action="details.jsp">
+    <table border="1" width="80%">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>More</th>
+        </tr>
+
+        <%
+                Connection connection = null;
+                Statement statement = null;
+                ResultSet resultSet = null;
+                try {
+                    connection = com.secure.db.DatabaseManager.getConnection();
+                    statement = connection.createStatement();
+                    resultSet = statement.executeQuery("SELECT * from person");
+                    int iCount=0;
+
+
+ while (resultSet.next()) {
+            iCount =iCount+1;
+                %>
+                <tr>
+                    <td colspan="3">
+     <form name='submitForm_<%=iCount%>' method="POST" action="details.jsp">
+    <table><tbody><tr><td>
+
+    <input type="hidden" name="first_name"
+                        value='<%=resultSet.getString("first_name")%>'><%=resultSet.getString("first_name")%></td>
+                    <td><input type=="hidden" name="last_name"
+                        value='<%=resultSet.getString("last_name")%>'><%=resultSet.getString("last_name")%></td>
+                   <td><a href="javascript:document.submitForm_<%=iCount%>.submit()">Click Me</a><td>
+                </tr>
+    </tbody></table> </form></td>
+            <%
+                }
+            %>
+
+        </table>
+
+    <%
+        } catch (Exception ex) {
+            ex.printStackTrace();
+    %>
+    Ooops, something bad happened:
+    <%
+        } finally {
+            if (resultSet != null)
+                resultSet.close();
+            if (statement != null)
+                statement.close();
+            if (connection != null)
+                connection.close();
+        }
+    %>

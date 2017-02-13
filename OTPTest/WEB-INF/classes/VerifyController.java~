@@ -1,0 +1,39 @@
+import java.io.IOException;  
+import java.io.PrintWriter;  
+import java.io.ObjectOutputStream;
+import javax.servlet.ServletException;  
+import javax.servlet.annotation.WebServlet;  
+import javax.servlet.http.HttpServlet;  
+import javax.servlet.http.HttpServletRequest;  
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.annotation.WebServlet;
+      
+// @WebServlet("/VerifyController")
+public class VerifyController extends HttpServlet {  
+  
+  private static final long serialVersionUID = 1L;  
+             
+  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {  
+    String key = "JX2H2TVGARQQBLW7";  //providing key directly for test
+    String otpstr = request.getParameter("otp");  
+    long otp = Long.parseLong(otpstr);  
+    
+    long t = System.currentTimeMillis();  
+    LEOSAuthenticator la = new LEOSAuthenticator();  
+    la.setWindowSize(5);  // Provide 5 * 30 seconds of grace...  
+    long l = la.check_code(key,otp,t); 
+    
+    ObjectOutputStream out = new ObjectOutputStream(response.getOutputStream());    
+    
+    if(l == 0 ) {  
+      System.out.println("Fail"); 
+      out.writeObject("Verification Unsuccessful!"); 
+
+    } else {  
+      System.out.println("OK, matched. Matched OTP is: " + l);
+      out.writeObject("Verification Successful!");  
+    }        
+  }  
+}
+
+

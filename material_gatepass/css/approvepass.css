@@ -1,0 +1,118 @@
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+#header {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+#content {
+	padding-bottom:100px;   /* Height of the footer element */
+}
+#footer {
+	width:100%;
+        position:absolute;
+	margin:0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        color:white;
+        padding:15px;
+        font-size:12px;   
+        background-color :black;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: orange;
+    color: white;
+}
+pre {
+    
+    color :#660099;
+    font-size: 12pt;
+}
+b {
+   color:#580000;
+}
+
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label {
+    color: #292321;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+
+input[type="radio"] + label span {
+     background-color:#292321;
+}
+
+input[type="radio"]:checked + label span{
+     background-color:#CC3300;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition:background-color linear;
+  -o-transition:background-color linear;
+  -moz-transition:background-color linear;
+  transition:background-color linear;
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: grey;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: orange;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+

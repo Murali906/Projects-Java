@@ -1,0 +1,107 @@
+
+.header {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+body
+{background-color:#eeeeee;
+}
+
+input[type=text]{
+    width: 50%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+ 
+}
+
+input[type=submit] {
+    width: 50%;
+    background-color: Grey;
+    color: wh1ite;
+    padding: 10px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size:16px;
+}
+input[type=reset] {
+    width:50%;
+    background-color: Grey;
+    color: wh1ite;
+    padding: 10px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size:16px;
+}
+textarea {
+    width: 50%;
+    height: 100px;
+    padding: 10px 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+    text-indent: 0;
+    font-size: 14px;
+    resize: none;
+}
+
+input[type=submit]:hover {
+    width: 50%;
+    background-color: #484848;
+    color:white;
+}
+input[type=reset]:hover {
+    width: 50%;
+    background-color: #484848;
+    color:white;
+}
+select {
+    width: 50%;
+    padding: 10px 10px;
+   
+    
+}
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: grey;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: orange;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+
+

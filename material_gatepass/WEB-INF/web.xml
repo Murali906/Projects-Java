@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ 
+<context-param>
+  <param-name>jdbcDriver</param-name>
+  <param-value>com.mysql.jdbc.Driver</param-value>
+</context-param>
+<context-param>
+  <param-name>dbUrl</param-name>
+  <param-value>jdbc:mysql://localhost/material_gatepass</param-value>
+</context-param>
+<context-param>
+  <param-name>authUser</param-name>
+  <param-value>root</param-value>
+</context-param>
+<context-param>
+  <param-name>authPass</param-name>
+  <param-value>Walnut01</param-value>
+</context-param>
+
+<servlet>
+  <servlet-name>Validate servlet</servlet-name>
+  <servlet-class>model.ValidateLogin</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>Validate servlet</servlet-name>
+  <url-pattern>/ValidateLogin</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>Due Items</servlet-name>
+  <servlet-class>model.MailDueItem</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>Due Items</servlet-name>
+  <url-pattern>/itemsdue.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>Validate Android</servlet-name>
+  <servlet-class>model.ValidateAndroid</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>Validate Android</servlet-name>
+  <url-pattern>/ValidateAndroid</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>Register New Item</servlet-name>
+  <servlet-class>model.RegNewItem</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>Register New Item</servlet-name>
+  <url-pattern>/register</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+  <servlet-name>New User</servlet-name>
+  <servlet-class>model.RequestRegister</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>New User</servlet-name>
+  <url-pattern>/request</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>Update</servlet-name>
+  <servlet-class>model.update</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>Update</servlet-name>
+  <url-pattern>/update</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>Approve</servlet-name>
+  <jsp-file>/approvepass.jsp</jsp-file>
+</servlet>
+ 
+<servlet-mapping>
+  <servlet-name>Approve</servlet-name>
+  <url-pattern>/approve.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>Approve</servlet-name>
+  <jsp-file>/approvepassadmin.jsp</jsp-file>
+</servlet>
+ 
+<servlet-mapping>
+  <servlet-name>Approve</servlet-name>
+  <url-pattern>/approveadmin.do</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+  <servlet-name>Submit Decision</servlet-name>
+  <servlet-class>model.SubmitDecision</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>Submit Decision</servlet-name>
+  <url-pattern>/sumbit.do</url-pattern>
+</servlet-mapping>
+
+
+
+</web-app>  
+ 
+
+
+
