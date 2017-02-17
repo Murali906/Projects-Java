@@ -17,6 +17,8 @@ Functionalities of the portal :
 -->See Notifications
 -->Manage approvals 
 
+The webportal is wriiten using JSPs, Java servlets and Apache Tomcat similar to a LAMP environment.
+
 Screenshots :
 
 ![1home_page](https://cloud.githubusercontent.com/assets/22842061/23077301/08367d86-f512-11e6-836e-dfecbec08ed2.png)
