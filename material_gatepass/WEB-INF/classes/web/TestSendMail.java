@@ -5,9 +5,6 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
-/**
- * Created by anirudh on 28/10/14.
- */
 public class TestSendMail{
 
     public static void main(String args[]) {
